@@ -49,19 +49,13 @@ class credentials():
         print("      CREATE A NEW ACCOUNT!")
         print(" ")
 
-        print("what is your first name?..")
-        f_name = input()
-        print(" " * 3)
-
-        print("What is your last name?..")
-        l_name = input()
+        print("what is your username?..")
+        username = input()
         print(" " * 3)
 
         print("what is your email address?..")
         email = input()
         print(" " * 3)
-
-        username = f_name + l_name
 
         print("create new password")
         password = input()
@@ -71,8 +65,37 @@ class credentials():
         cpassword = input()
         print(" " * 3)
 
-        print("Your password manager account for " +
-              username + " has been created successfully")
-        print('\n')
-        print(" " * 3)
-        print("proceed to login")
+        while password != cpassword:
+            print("password did not match")
+            print("enter your new password")
+            password = input()
+            print("confirm your new password")
+            cpassword = input()
+            
+        else:
+            print("Your password manager account for " +
+                username + " has been created successfully")
+            print('\n')
+            print(" " * 3)
+            print("proceed to login")
+            print(" " * 3)
+            print ("Enter username")
+            login_username = input()
+            print("enter password")
+            login_password = input()
+            print(" " * 3)
+
+        while login_username != username or login_password != password:
+            print("password did not match")
+            print("enter your new password")
+            password = input()
+
+            print(" " * 3)
+            print("confirm your new password")
+            cpassword = input()
+            print(" " * 3)
+        
+        else: 
+            print("welcome back " + login_username)
+            print('\n')
+            
