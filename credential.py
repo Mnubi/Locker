@@ -31,71 +31,59 @@ class credentials():
         user_name = input('User name: ')
         # print('\n')
 
-        while True:
-            print("\n1. To type your own pasword:\n2. To generate random Password")
-            password_Choice = input().lower()
-            if password_Choice == '1':
-                password = input("Enter Password")
+    elif user_option == "2":
 
-                break
-            elif password_Choice == '2':
-                password = generate_Password()
-                break
+            print("      CREATE A NEW ACCOUNT!")
+            print(" ")
+
+            print("what is your username?..")
+            username = input()
+            print(" " * 3)
+
+            print("what is your email address?..")
+            email = input()
+            print(" " * 3)
+
+            print("create new password")
+            password = input()
+            print(" " * 3)
+
+            print("confirm new password")
+            cpassword = input()
+            print(" " * 3)
+
+            while password != cpassword:
+                print("password did not match")
+                print("enter your new password")
+                password = input()
+                print("confirm your new password")
+                cpassword = input()
+                
             else:
-                print("Invalid password please try again")
+                print("Your password manager account for " +
+                    username + " has been created successfully")
+                print('\n')
+                print(" " * 3)
+                print("proceed to login")
+                print(" " * 3)
+                print ("Enter username")
+                login_username = input()
+                print("enter password")
+                login_password = input()
+                print(" " * 3)
 
+            while login_username != username or login_password != password:
+                print("password did not match")
+                print("enter your new password")
+                password = input()
+
+                print(" " * 3)
+                print("confirm your new password")
+                cpassword = input()
+                print(" " * 3)
+            
+            else: 
+                print("welcome back " + login_username)
+                print('\n')
     else:
-
-        print("      CREATE A NEW ACCOUNT!")
-        print(" ")
-
-        print("what is your username?..")
-        username = input()
-        print(" " * 3)
-
-        print("what is your email address?..")
-        email = input()
-        print(" " * 3)
-
-        print("create new password")
-        password = input()
-        print(" " * 3)
-
-        print("confirm new password")
-        cpassword = input()
-        print(" " * 3)
-
-        while password != cpassword:
-            print("password did not match")
-            print("enter your new password")
-            password = input()
-            print("confirm your new password")
-            cpassword = input()
-            
-        else:
-            print("Your password manager account for " +
-                username + " has been created successfully")
-            print('\n')
-            print(" " * 3)
-            print("proceed to login")
-            print(" " * 3)
-            print ("Enter username")
-            login_username = input()
-            print("enter password")
-            login_password = input()
-            print(" " * 3)
-
-        while login_username != username or login_password != password:
-            print("password did not match")
-            print("enter your new password")
-            password = input()
-
-            print(" " * 3)
-            print("confirm your new password")
-            cpassword = input()
-            print(" " * 3)
-        
-        else: 
-            print("welcome back " + login_username)
-            print('\n')
-            
+            print("Invalid choice. please choose between option 1 or option 2")
