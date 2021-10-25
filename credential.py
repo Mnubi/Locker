@@ -86,7 +86,7 @@ class credentials():
                 print("welcome back " + login_username)
                 print('\n')
 
-                print("\n1.Add account \n2. View Saved accounts")
+                print("\n1.Add account \n2. View Saved accounts \n3. Delete existing account")
 
 
 
