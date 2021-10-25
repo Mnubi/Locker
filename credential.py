@@ -62,10 +62,11 @@ class credentials():
             else:
                 print("Your password manager account for " +
                     username + " has been created successfully")
-                print('\n')
                 print(" " * 3)
+
                 print("proceed to login")
                 print(" " * 3)
+
                 print ("Enter username")
                 login_username = input()
                 print("enter password")
@@ -80,11 +81,15 @@ class credentials():
                 print(" " * 3)
                 print("confirm your new password")
                 cpassword = input()
-                print(" " * 3)
             
             else: 
                 print("welcome back " + login_username)
                 print('\n')
+
+                print("\n1.Add account \n2. View Saved accounts")
+
+
+
     else:
             print("Invalid choice. please choose between option 1 or option 2")
             print(" " * 5)
