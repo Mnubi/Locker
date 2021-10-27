@@ -24,12 +24,15 @@ class credentials():
     user_option = input()
 
     if user_option == "1":
-        print("Enter your account details")
+        username = input('Enter username: ')
         print('\n')
-        account_name = input('Account: ')
-        print('\n')
-        user_name = input('User name: ')
+        password = input('Enter password: ')
         # print('\n')
+
+        print("User not registered")
+        print('\n')
+        print("The user username " + username + " is not a registered, please register account to proceed")
+        print('\n')
 
     elif user_option == "2":
 
