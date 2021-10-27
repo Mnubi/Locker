@@ -31,7 +31,7 @@ class credentials():
 
         print("User not registered")
         print('\n')
-        print("The user username " + username + " Please register account to proceed")
+        print("The user username " + username + " is not a registered, please register account to proceed")
         print('\n')
 
     elif user_option == "2":
