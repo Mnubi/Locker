@@ -47,5 +47,11 @@ class TestUser(unittest.TestCase):
         self.user1.delete_user()
         self.assertEqual(len(User.user_list),1)
 
+    def test_find_by_username(self):
+        self.user1.save_user()
+        another_user = User("Kelsey", "1234")
+        another_user.save_user()
+        found_user = User.find_by_username("username")
+
 if __name__ == '__main__':
     unittest.main()
