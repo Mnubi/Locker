@@ -33,6 +33,8 @@ This is a python application that manages login and sign-up credentials of a per
 
 ## Known Bugs
 * There are no known bugs currently, the application should run smoothly
+* If you find a bug (the website couldn't handle the query and or gave undesired results), kindly open an issue here by including your search query and the expected result.
+* If you'd like to request a new function, feel free to do so by opening an issue here. Please include sample queries and their corresponding results.
 
 ## Contact Information 
 
