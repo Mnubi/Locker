@@ -22,5 +22,21 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_credentials()
         self.assertEqual(len(Credential.user_credentials), 1)
 
+    def test_delete_credentials(self):
+        """
+        check if saved credential from the users credentials is deleted
+        """
+        self.assertEqual(len(Credential.user_credentials),0)
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credential.user_credentials),1)
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credential.user_credentials),0)
+
+    def test_find_credentials_by_site(self):
+        '''
+        test to check if we can find a credential by site
+        '''
+        self.found_credentials = Credential.find_by_account_site("Twitter")
+
 if __name__ == '__main__':
     unittest.main()
